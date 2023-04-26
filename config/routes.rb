@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'pages/home'
   get 'posts/new'
   get 'users/new'
   root :to => 'pages#home'

@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+270423 commit - Models and controllers up, seeding issues: ActiveModel::UnknownAttributeError: unknown attribute 'image' for Post.

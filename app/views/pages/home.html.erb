@@ -1,0 +1,6 @@
+<h1>Share your life. It's worth telling.</h1>
+<p></p>
+
+<% if @current_user.present? %>
+    <p>Logged in as: <%= @current_user.email %></p>
+<% end %>
