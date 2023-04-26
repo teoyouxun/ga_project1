@@ -1,0 +1,15 @@
+<h1><%= @post.title %></h1>
+
+<%= image_tag @post.image, :class => 'feature' if @post.image.present?%>
+
+<ul>
+    <li>Title: <%= @post.title %></li>
+    
+    <li><%= @post.content %></li>
+    
+</ul>
+
+<div class="controls">
+        <%= link_to "Edit post", edit_post_path(@post) %> 
+        <%= button_to "Delete post", @post, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
+    </div>
