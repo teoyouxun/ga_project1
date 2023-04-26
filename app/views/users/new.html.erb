@@ -1,0 +1,18 @@
+<h1>Join the easiest web sharing app site today!</h1>
+
+
+<p>Create an account in less than a minute and start posting. It's that easy.</p>
+
+<% @users.each do |user| %>
+    <p><%= user.name %></p>
+    
+    <p><%= user.email %></p>
+
+
+ <%= user.label :dob, 'Date of birth' %>
+    <%= user.text_field :dob, :placeholder => 'YYYY-MM-DD' %>
+    <p>Your date of birth will not be shown publicly.</p>
+
+<% end %>
+
+    

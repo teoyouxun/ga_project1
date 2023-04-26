@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dpteuidsp
+  api_key: '413652313537517'
+  api_secret: W3pDDcjUJxhn_u52vunUIuZLdQg
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: dpteuidsp
+  api_key: '413652313537517'
+  api_secret: W3pDDcjUJxhn_u52vunUIuZLdQg
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: dpteuidsp
+  api_key: '413652313537517'
+  api_secret: W3pDDcjUJxhn_u52vunUIuZLdQg
+  enhance_image_tag: true
+  static_file_support: false
