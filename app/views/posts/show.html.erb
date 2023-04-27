@@ -6,6 +6,8 @@
     <li>Title: <%= @post.title %></li>
     
     <li><%= @post.content %></li>
+
+    <%= button_to "Like", method: "put" %>
     
 </ul>
 
