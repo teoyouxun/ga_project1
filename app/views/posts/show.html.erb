@@ -1,15 +1,10 @@
 <h1><%= @post.title %></h1>
 
 <%= image_tag @post.image, :class => 'feature' if @post.image.present?%>
-
-<ul>
-    <li>Title: <%= @post.title %></li>
-    
-    <li><%= @post.content %></li>
+ 
+    <p><%= @post.content %></p>
 
     <%= button_to "Like", method: "put" %>
-    
-</ul>
 
 <div class="controls">
         <%= link_to "Modify post", edit_post_path(@post) %> 

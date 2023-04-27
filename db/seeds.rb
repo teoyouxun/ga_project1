@@ -18,8 +18,8 @@ p3 = Post.create(:title => 'New car', :image => 'https://images.squarespace-cdn.
 p4 = Post.create(:title => 'Holiday', :image => 'https://content.tui.co.uk/adamtui/2017_9/6_9/402af3e4-9732-4b72-b622-a7e600960ca2/shutterstock_472963435WebOriginalCompressed.jpg?i10c=img.resize(width:1080);img.crop(width:1080%2Cheight:608)', content: 'Just came back from holiday in Bali last week!')
 
 Follower.destroy_all
-f1 = Follower.create(:name => 'William', :nationality => 'Australian', :dob => '1879-02-22')
-f2 = Follower.create(:name => 'Andrew', :nationality => 'Australian', :dob => '1879-02-22')
+f1 = Follower.create(:name => 'William', :nationality => 'Australian', :dob => '1994-03-25')
+f2 = Follower.create(:name => 'Andrew', :nationality => 'Australian', :dob => '1979-12-12')
 
 # Associations
 
