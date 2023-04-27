@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   # get 'users/new'
   root :to => 'pages#home'
   resources :users, :only => [:index, :new, :create]
-  resources :posts  # :only => [:new, :create, :edit]
-
+  # resources :posts  # :only => [:new, :create, :edit]
+  resources :posts do
+    resources :likes
+  end
   # put '/post/:id/like', to: 'posts#like', as: 'like'
 
   get '/login' => 'session#new'

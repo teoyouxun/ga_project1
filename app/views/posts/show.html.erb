@@ -4,9 +4,13 @@
  
     <p><%= @post.content %></p>
 
-    <%= button_to "Like", method: "put" %>
+    <%= button_to 'Like', post_likes_path(@post), method: :post %>
+
+    <p><%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes'%></p>
 
 <div class="controls">
-        <%= link_to "Modify post", edit_post_path(@post) %> 
+        <%= button_to "Modify post", edit_post_path(@post), :method => :get %> 
         <%= button_to "Delete post", @post, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
     </div>
+
+    

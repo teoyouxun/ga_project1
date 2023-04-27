@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :check_for_login
+  before_action :check_post_ownership, only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.all
@@ -30,10 +31,6 @@ class PostsController < ApplicationController
     @post = Post.find params[:id]
   end
 
-  def like
-    @post = Post.all.find(params[:id])
-  end
-
   def destroy
     post = Post.find params[:id]
     post.destroy
@@ -43,5 +40,13 @@ class PostsController < ApplicationController
   private
   def post_params
     params.require(:post).permit(:title)
+  end
+
+  def check_post_ownership
+    post = Post.find(params[:id])
+    unless post.user == @current_user
+      flash[:alert] = "You don't have access to this post."
+      redirect_to post_path(post.id) 
+    end
   end
 end

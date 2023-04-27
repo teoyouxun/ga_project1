@@ -1,7 +1,7 @@
 <h1>All Posts</h1>
 
 <% @posts.each do |post| %>
-    <p> <%= link_to post.title, post_path(post.id) %> </p>
+    <p> <%= link_to post.title, post_path(post) %> </p>
 <%= link_to post_path(post.id) do %>
     <%= image_tag post.image, :class => 'feature' if post.image.present?%>
     <% end %>
@@ -9,7 +9,9 @@
     <p>
     <%= post.content %>
 
-    <%= button_to "Like", method: "put" %>
+    <%= button_to 'Like', post_likes_path(post), method: :post %>
+
+    <p><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></p>
     </p>
     
 <% end %>
