@@ -1,26 +1,22 @@
-# README
+# MicroblogX
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Create an account and start posting in minutes! It's that simple. 
 
-Things you may want to cover:
+Once signed up, you can post snippets of your life events. 
 
-* Ruby version
+Edit or delete your posts whenever you feel like.
 
-* System dependencies
+Note: You will NOT be able to edit or delete posts that are not yours! Don't worry.
 
-* Configuration
+View all other posts on the All Posts page.
 
-* Database creation
+More functionalities coming soon! 
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Changelog
 
 270423 commit - Models and controllers up, seeding issues: ActiveModel::UnknownAttributeError: unknown attribute 'image' for Post.
+
+Further updates - site is now functioning, likes added, users can only view but not modify or destroy other's posts. 
+
+

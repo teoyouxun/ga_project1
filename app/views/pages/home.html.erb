@@ -3,6 +3,18 @@
 
 <p>Join the easiest web sharing app site today!</p>
 
+<% @posts.each do |post| %>
+    <p> <%= link_to post.title, post_path(post) %> </p>
+<%= link_to post_path(post.id) do %>
+    <%= image_tag post.image, :class => 'feature' if post.image.present?%>
+    <% end %>
+
+    <p>
+    <%= post.content %>
+    </p>
+    <% end %>
+
+
 <% if @current_user.present? %>
     <p>Logged in as: <%= @current_user.email %></p>
 <% end %>
